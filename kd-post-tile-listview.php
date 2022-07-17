@@ -1,6 +1,8 @@
 <?php
 /**
  * Plugin Name: KD Post Tile Listview
+ * Text Domain: kd-post-tile-listview
+ * Domain Path: /languages/
  * Author: Karolis Dailidonis
  * Author URI: https://karolisdailidonis.de
  * Plugin URI: https://karolisdailidonis.de/developments/kd-post-tile-listview
@@ -18,13 +20,12 @@ if (!defined('ABSPATH')) {
 define('KD_POST_TILE_LISTVIEW_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('KD_POST_TILE_LISTVIEW_PLUGIN_PATH', plugin_dir_path(__FILE__));
 
-if (!defined('KD_TILE_PORTFOLIO_FILE'))
-    define('KD_TILE_PORTFOLIO_FILE', __FILE__);
+if (!defined('KD_POST_TILE_LISTVIEW_FILE'))
+    define('KD_POST_TILE_LISTVIEW_FILE', __FILE__);
 
-if (!defined('KD_TILE_PORTFOLIO_DIR'))
-    define('KD_TILE_PORTFOLIO_DIR', dirname(KD_TILE_PORTFOLIO_FILE));
+if (!defined('KD_POST_TILE_LISTVIEW_PLUGIN_DIR'))
+    define('KD_POST_TILE_LISTVIEW_PLUGIN_DIR', dirname( KD_POST_TILE_LISTVIEW_FILE ));
 
-    
 // ADMIN Functions
 if ( is_admin() ) {
     require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/admin_functions.php';
@@ -37,6 +38,9 @@ if ( is_admin() ) {
     add_action('admin_menu', 'kd_tiles_portfolio_setup_menu');
     add_action('admin_enqueue_scripts', 'kd_post_tile_listview_admin_css_js');
     add_filter('theme_post_templates', 'kd_post_tile_listview_templates');
+    add_action('plugins_loaded', function (){
+        load_plugin_textdomain('kd-post-tile-listview', false, KD_POST_TILE_LISTVIEW_PLUGIN_DIR);
+    });
 }
 
 // PUBLIC Functions
@@ -45,6 +49,6 @@ require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/public_functions.php'
 
 add_shortcode('tiles_portfolio', 'kd_post_tile_listview_shortcode');
 add_filter('template_include', 'kd_post_tile_listview_change_templates', 99);
-
+add_filter('load_textdomain_mofile', 'kd_post_tile_listview_textdomain', 10, 2);
 
 ?>

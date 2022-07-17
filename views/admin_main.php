@@ -26,7 +26,6 @@ function kd_post_tiles_listview_admin_main_init()
             return $categorieOptions;
         }
 
-
         foreach ($categories as $category) {
             $isSelected = ($category->term_id == $selected) ? "selected" : "blubb";
             $categorieOptions .= '<option  ' .  $isSelected .  '  value="' . esc_html($category->term_id) . '">' . esc_html($category->name) . '</option>';
@@ -41,7 +40,7 @@ function kd_post_tiles_listview_admin_main_init()
 ?>
     <section id="plugin-page">
         <div id="page-nav" class="box">
-            <h1> Post Tile Listview</h1>
+            <h1> <?php _e('KD Post Tile Listview', 'kd-post-tile-listview'); ?></h1>
             <div id="nav-menus">
 
             </div>
@@ -49,13 +48,13 @@ function kd_post_tiles_listview_admin_main_init()
 
         <div id="page-content">
 
-            <h2>Neue Ansicht erstellen</h2>
+            <h2><?php _e('New Listview Item', 'kd-post-tile-listview'); ?></h2>
             <form class="box listview-row" method="post">
                 <div class="header">
                     <h2> <input type="text" placeholder="Title" name="tile-title"></h2>
                     <div class="listview-contextmenu">
-                        <input type="submit" value="Erstellen" name="createNewTileView" class="button-secondary">
-                        <input type="submit" value="Abbrechen" name="" class="button-secondary">
+                        <input type="submit" value="<?php _e('Create', 'kd-post-tile-listview'); ?>" name="createNewTileView" class="button-secondary">
+                        <input type="submit" value="<?php _e('Cancel', 'kd-post-tile-listview'); ?>" name="" class="button-secondary">
                     </div>
                 </div>
 
@@ -68,7 +67,7 @@ function kd_post_tiles_listview_admin_main_init()
                     </select>
                     -->
 
-                    <label for="tile-categorie-select">Categorie</label>
+                    <label for="tile-categorie-select"><?php _e('Category', 'kd-post-tile-listview'); ?></label>
                     <select id="tile-categorie-select" name="tile-categories">
                         <?php echo $categorieOptions ?>
                     </select>
@@ -76,7 +75,7 @@ function kd_post_tiles_listview_admin_main_init()
                 </div>
             </form>
 
-            <h2>Erstellte Listenansichten</h2>
+            <h2><?php _e('All Listviews', 'kd-post-tile-listview'); ?></h2>
 
             <?php foreach ($allTiles as $tile) { ?>
                 <form class="box listview-row" method="post">
@@ -84,14 +83,14 @@ function kd_post_tiles_listview_admin_main_init()
                     <div class="header">
                         <h2> <input type="text" value="<?php echo $tile->title ?>" name="tile-title"> </h2>
                         <div class="listview-contextmenu">
-                            <input type="submit" value="Speichern" name="save-tile" class="button-secondary">
-                            <input type="submit" value="Delete" name="delete-tile" class="button-secondary">
+                            <input type="submit" value="<?php _e('Save', 'kd-post-tile-listview'); ?>" name="save-tile" class="button-secondary">
+                            <input type="submit" value="<?php _e('Delete', 'kd-post-tile-listview'); ?>" name="delete-tile" class="button-secondary">
                         </div>
                     </div>
 
                     <div>
 
-                        <label for="tile-categorie-select_<?php echo $tile->id ?>">Categorie</label>
+                        <label for="tile-categorie-select_<?php echo $tile->id ?>"><?php _e('Category', 'kd-post-tile-listview'); ?></label>
                         <select id="tile-categorie-select_<?php echo $tile->id ?>" name="tile-categories">
                             <?php echo getCetegorieOptions($categories, $tile->categories) ?>
                         </select>
@@ -102,7 +101,7 @@ function kd_post_tiles_listview_admin_main_init()
                     <code>
                         [tiles_portfolio id="<?php echo $tile->id ?>"]
                     </code>
-                    <p>Um die Kacheln auf eine Anzahl beschränken</p>
+                    <p><?php _e('Optionally you can limit the number of displayed tiles', 'kd-post-tile-listview'); ?></p>
                     <code>
                         [tiles_portfolio id="<?php echo $tile->id ?>" num="7"]
                     </code>

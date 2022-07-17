@@ -16,4 +16,13 @@ function kd_post_tile_listview_change_templates($template)
     return $template;
 }
 
+function kd_post_tile_listview_textdomain($mofile, $domain)
+{
+    if ('kd-post-tile-listview' == $domain) {
+        $locale = apply_filters('plugin_locale', determine_locale(), $domain);
+        $mofile = KD_POST_TILE_LISTVIEW_PLUGIN_PATH . '/languages/' . $domain . '-' . $locale . '.mo';
+    }
+    return $mofile;
+}
+
 ?>

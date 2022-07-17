@@ -1,6 +1,10 @@
 /* Backend */
 .toplevel_page_kd-tiles-portfolio-plugin  {
 
+    h2 {
+        margin-top: 50px;
+    }
+
     .box {
         background-color: #fff;
         box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
@@ -20,6 +24,12 @@
                 justify-content: center;
                 align-items: center;
             }
+        }
+
+        #page-content {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
         }
 
         .listview-row{

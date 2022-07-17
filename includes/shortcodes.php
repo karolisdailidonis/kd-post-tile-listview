@@ -1,7 +1,7 @@
 <?php
 function kd_post_tile_listview_shortcode($atts)
 {
-    wp_enqueue_style('kd_tile_portfolio_style', KD_TILE_PORTFOLIO_PLUGIN_URL . 'assets/css/style.css');
+    wp_enqueue_style('kd_tile_portfolio_style', KD_POST_TILE_LISTVIEW_PLUGIN_URL . 'assets/css/style.css');
 
     global $wpdb;
     $table_tilelist     = $wpdb->prefix . 'kd_tilelist_views';

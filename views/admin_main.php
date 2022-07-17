@@ -4,7 +4,7 @@ function kd_post_tiles_listview_admin_main_init()
 {
 
     global $wpdb;
-    require_once KD_TILE_PORTFOLIO_PLUGIN_PATH . 'includes/issets_admin_main.php';
+    require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/issets_admin_main.php';
 
     $table_tilelist     = $wpdb->prefix . 'kd_tilelist_views';
     $allTiles           = $wpdb->get_results("SELECT * FROM " . $table_tilelist);

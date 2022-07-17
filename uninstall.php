@@ -8,5 +8,4 @@ global $wpdb;
 $table_tilelist = $wpdb->prefix . 'kd_tilelist_views';
 
 $wpdb->query("DROP TABLE IF EXISTS {$table_tilelist}");
- 
 ?>

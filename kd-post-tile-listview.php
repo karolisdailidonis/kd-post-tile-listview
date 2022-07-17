@@ -37,12 +37,12 @@ if ( is_admin() ) {
     
     add_action('admin_menu', 'kd_tiles_portfolio_setup_menu');
     add_action('admin_enqueue_scripts', 'kd_post_tile_listview_admin_css_js');
-    add_filter('theme_post_templates', 'kd_post_tile_listview_templates');
     add_action('plugins_loaded', function (){
         load_plugin_textdomain('kd-post-tile-listview', false, KD_POST_TILE_LISTVIEW_PLUGIN_DIR);
     });
 }
 
+add_filter('theme_post_templates', 'kd_post_tile_listview_templates');
 // PUBLIC Functions
 require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/shortcodes.php';
 require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/public_functions.php';

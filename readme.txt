@@ -5,20 +5,18 @@ Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 8.0
 License: GNUGPLv3
+Stable tag: 0.2.0
 
-150 Description
+A plugin to list posts in tile format, selected by a specific category. It allows multiple lists, each with different category and limited number if needed.
 
 == Installation ==
-Just install the plugin, select on admin panel \"Tile Listview\" and create a new Listview by category.
-Add the new shortcode via block to the page or post
+1. install plugin
+2. select "Tile Listview" in the admin menu
+3. create a new list with a title and a category
+4. copy shortcode and paste it in post or page, use Gutenberg block for that "Shortcode".
 
 == Frequently Asked Questions ==
-sas
-
-== Screenshots ==
-1. Public view
-2. Setting
-3. add to page or post
+I am open for questions
 
 == Changelog ==
 0.2.0 - Create Public ready plugin

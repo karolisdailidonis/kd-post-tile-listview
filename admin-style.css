@@ -1,0 +1,43 @@
+/* Backend */
+.toplevel_page_kd-tiles-portfolio-plugin .box {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page {
+  display: flex;
+  flex-flow: column;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page #page-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page #page-nav #nav-menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page .listview-row {
+  display: flex;
+  flex-flow: column;
+  margin: 10px 0;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page .listview-row .header {
+  display: flex;
+  justify-content: space-between;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page .listview-row .header h2 input {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page .listview-row .listview-contextmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page .listview-row .listview-contextmenu input {
+  margin: 0 5px;
+}
+
+/*# sourceMappingURL=admin-style.css.map */

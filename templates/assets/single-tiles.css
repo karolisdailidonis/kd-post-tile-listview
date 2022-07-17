@@ -1,0 +1,38 @@
+
+article#kd-tiles-post {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+#kd-tiles-post-thumbnail {
+    height: 350px;
+    background-color: #2a1f36;
+}
+
+#kd-tiles-post-thumbnail img {
+    object-fit: cover;
+}
+
+#kd-tiles-post header {
+    margin: 80px auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+#kd-tiles-post h1 {
+    font-size: 1.5em;
+}
+
+div#kd-tiles-post-content {
+    max-width: 700px;
+    margin: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    #kd-tiles-post-thumbnail {
+        height: 200px;
+    }
+}

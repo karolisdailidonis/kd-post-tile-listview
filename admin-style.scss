@@ -1,0 +1,55 @@
+/* Backend */
+.toplevel_page_kd-tiles-portfolio-plugin  {
+
+    .box {
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+        padding: 5px;
+    }
+
+    #plugin-page {
+        display: flex;
+        flex-flow: column;
+
+        #page-nav{
+            display: flex;
+            justify-content: space-between;
+
+            #nav-menus{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .listview-row{
+            display: flex;
+            flex-flow: column;
+            margin: 10px 0;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+
+                h2 {
+                    
+                    input {
+                            border-radius: 0;
+                            border: 0;
+                            border-bottom: 1px solid;
+                        }
+                }
+            }
+
+            .listview-contextmenu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}

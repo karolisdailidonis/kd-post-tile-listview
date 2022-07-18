@@ -2,6 +2,7 @@
 .tile-list {
   display: flex;
   margin: auto;
+  width: 100%;
   max-width: 950px;
   height: 100%;
   flex-flow: row wrap;

@@ -6,7 +6,7 @@
  * Author: Karolis Dailidonis
  * Author URI: https://karolisdailidonis.de
  * Plugin URI: https://karolisdailidonis.de/developments/kd-post-tile-listview
- * Version: 0.2.1
+ * Version: 0.2.2
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * License: GNUGPLv3

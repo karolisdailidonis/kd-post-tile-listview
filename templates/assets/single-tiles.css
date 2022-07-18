@@ -13,6 +13,8 @@ article#kd-tiles-post {
 
 #kd-tiles-post-thumbnail img {
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #kd-tiles-post header {

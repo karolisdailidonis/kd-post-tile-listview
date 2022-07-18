@@ -30,7 +30,6 @@ if (!defined('KD_POST_TILE_LISTVIEW_PLUGIN_DIR'))
 if ( is_admin() ) {
     require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/admin_functions.php';
     require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/install.php';
-    require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/uninstall.php';
     require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'views/admin_main.php';
     
     register_activation_hook(__FILE__, 'kd_tiles_portfolio_activate');

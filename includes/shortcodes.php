@@ -47,7 +47,7 @@ function kd_post_tile_listview_shortcode($atts) {
 
 
         ?>
-                <a class="tile <?php echo ($count % 3 == 0) ? "full" : "half" ?>" href="<?php echo esc_url( get_permalink() ) ?>" style="background-image: url('<?php echo esc_url( get_the_post_thumbnail_url() ) ?>');">
+                <a class="tile <?php echo ($count % 3 == 0) ? "full" : "half" ?>" href="<?php echo esc_url( get_permalink() ) ?>" style="background-image: url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ) ?>');">
                     <div class="backgroundcolor"></div>
 
                     <div class="head">

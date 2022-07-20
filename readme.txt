@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 8.0
 License: GNUGPLv3
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 
 A plugin to list posts in tile format, selected by a specific category. It allows multiple lists, each with different category and limited number if needed.
 
@@ -19,5 +19,6 @@ A plugin to list posts in tile format, selected by a specific category. It allow
 I am open for questions
 
 == Changelog ==
+0.2.3 - Security fix: Sanitized & Escaped
 0.2.3 - Bugfixes: loading template and CSS things
 0.2.0 - Create Public ready plugin

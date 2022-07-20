@@ -6,7 +6,6 @@ function kd_post_tile_listview_change_templates($template) {
     if (is_single()) {
         $meta = get_post_meta(get_the_ID());
 
-        // if (!empty($meta['_wp_page_template'][0]) && $meta['_wp_page_template'][0] != $template) {
         if ( !empty($meta['_wp_page_template'][0]) && str_contains($meta['_wp_page_template'][0], 'single-tiles.php')) {
 
             if (file_exists( $meta['_wp_page_template'][0] ) ) {

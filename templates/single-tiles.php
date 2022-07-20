@@ -9,16 +9,16 @@ get_header(); ?>
     ?>
 
         <div id="kd-tiles-post-thumbnail">
-            <?php the_post_thumbnail();  ?>
+            <?php wp_kses_post( the_post_thumbnail() ); ?>
         </div>
 
         <header>
-            <h1><?php the_title(); ?></h1>
+            <h1><?php esc_html(the_title()); ?></h1>
             <hr>
         </header>
 
         <div id="kd-tiles-post-content">
-            <?php the_content(); ?>
+            <?php wp_kses_post( the_content() ); ?>
         </div>
 
         <?php

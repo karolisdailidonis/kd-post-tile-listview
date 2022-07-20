@@ -3,14 +3,15 @@
 if (isset($_POST['createNewTileView'])) {
 
     global $wpdb;
-    $table_tilelist     = $wpdb->prefix . 'kd_tilelist_views';
+    $table_tilelist = $wpdb->prefix . 'kd_tilelist_views';
 
-    $tileCategorie  = $_POST['tile-categories'];
-    $tileTitle      = $_POST['tile-title'];
+    $data   = array(
+        'categories'    => sanitize_text_field( $_POST['tile-categories'] ), 
+        'title'         => sanitize_text_field( $_POST['tile-title'] ),
+    );
 
-    $data   = array('categories' => $tileCategorie, 'title' => $tileTitle);
     $format = array('%s', '%s');
-    $wpdb->insert($table_tilelist, $data, $format);
+    $wpdb->insert( $table_tilelist, $data, $format );
 
 }
 
@@ -18,7 +19,7 @@ if (isset($_POST['delete-tile'])) {
     global $wpdb;
     $table_tilelist     = $wpdb->prefix . 'kd_tilelist_views';
 
-    $wpdb->delete( $table_tilelist, array('id' => $_POST['tile-id']) );
+    $wpdb->delete( $table_tilelist, array('id' => sanitize_text_field( $_POST['tile-id']) ));
 }
 
 if (isset($_POST['save-tile'])) {
@@ -29,12 +30,12 @@ if (isset($_POST['save-tile'])) {
         $table_tilelist,
         // DATA
         array( 
-            'title'         => $_POST['tile-title'], 
-            'categories'    => $_POST['tile-categories'] 
+            'title'         => sanitize_text_field( $_POST['tile-title'] ), 
+            'categories'    => sanitize_text_field( $_POST['tile-categories'] )
         ),
         // WHERE 
         array(
-            'id' => $_POST['tile-id']
+            'id' => sanitize_text_field( $_POST['tile-id'] )
         )
     );
 }

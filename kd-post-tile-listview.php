@@ -6,7 +6,7 @@
  * Author: Karolis Dailidonis
  * Author URI: https://karolisdailidonis.de
  * Plugin URI: https://karolisdailidonis.de/developments/kd-post-tile-listview
- * Version: 0.2.3
+ * Version: 0.2.4
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * License: GNUGPLv3
@@ -41,11 +41,11 @@ if ( is_admin() ) {
     });
 }
 
-add_filter('theme_post_templates', 'kd_post_tile_listview_templates');
 // PUBLIC Functions
 require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/shortcodes.php';
 require_once KD_POST_TILE_LISTVIEW_PLUGIN_PATH . 'includes/public_functions.php';
 
+add_filter('theme_post_templates', 'kd_post_tile_listview_templates');
 add_shortcode('tiles_portfolio', 'kd_post_tile_listview_shortcode');
 add_filter('template_include', 'kd_post_tile_listview_change_templates', 99);
 add_filter('load_textdomain_mofile', 'kd_post_tile_listview_textdomain', 10, 2);

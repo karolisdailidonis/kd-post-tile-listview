@@ -38,7 +38,7 @@ function kd_post_tiles_listview_admin_main_init()
 ?>
     <section id="plugin-page">
         <div id="page-nav" class="box">
-            <h1> <?php esc_html_e('KD Post Tile Listview', 'kd-post-tile-listview'); ?></h1>
+            <h1>KD Post Tile Listview</h1>
             <div id="nav-menus">
 
             </div>

@@ -56,7 +56,7 @@ function kd_post_tile_listview_shortcode($atts) {
                     </div>
 
                     <div class="link">
-                        <span>Anschauen</span>
+                        <span> <?php _e( 'Explore', 'kd-post-tile-listview' ) ?> </span>
                         <span>➜</span>
                     </div>
                 </a>

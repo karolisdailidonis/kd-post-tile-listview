@@ -18,6 +18,8 @@
         #page-nav{
             display: flex;
             justify-content: space-between;
+            margin-left: -20px;
+            padding-left: 20px;
 
             #nav-menus{
                 display: flex;
@@ -36,12 +38,15 @@
             display: flex;
             flex-flow: column;
             margin: 10px 0;
+            padding: 20px;
 
             .header {
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 10px;
 
                 h2 {
+                    margin: 0;
                     
                     input {
                             border-radius: 0;

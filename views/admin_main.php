@@ -38,7 +38,7 @@ function kd_post_tiles_listview_admin_main_init()
 ?>
     <section id="plugin-page">
         <div id="page-nav" class="box">
-            <img id="logo" src="<?php echo KD_POST_TILE_LISTVIEW_PLUGIN_URL . 'assets/img/icon-256x256.png' ?>" alt="">
+            <img id="logo" src="<?php echo esc_url( KD_POST_TILE_LISTVIEW_PLUGIN_URL . 'assets/img/icon-256x256.png' ) ?>" alt="">
             <h1>KD - Post Tile Listview</h1>
             <div id="nav-menus">
 

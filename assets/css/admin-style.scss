@@ -17,9 +17,17 @@
 
         #page-nav{
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
             margin-left: -20px;
             padding-left: 20px;
+
+            #logo {
+                height: 80px;
+            }
+
+            h1 {
+                align-self: center;
+            }
 
             #nav-menus{
                 display: flex;

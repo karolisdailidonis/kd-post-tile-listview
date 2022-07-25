@@ -13,9 +13,14 @@
 }
 .toplevel_page_kd-tiles-portfolio-plugin #plugin-page #page-nav {
   display: flex;
-  justify-content: space-between;
   margin-left: -20px;
   padding-left: 20px;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page #page-nav #logo {
+  height: 80px;
+}
+.toplevel_page_kd-tiles-portfolio-plugin #plugin-page #page-nav h1 {
+  align-self: center;
 }
 .toplevel_page_kd-tiles-portfolio-plugin #plugin-page #page-nav #nav-menus {
   display: flex;
